@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="96" id="KGk-i7-Jjw" customClass="SongsTVC" customModule="Fitness_Point" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="404" height="96"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="404" height="96"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFI-0V-hMM">
+                        <rect key="frame" x="14" y="0.0" width="32.333333333333336" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOO-jz-Zlh">
+                        <rect key="frame" x="14" y="21" width="377" height="67"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Songs" translatesAutoresizingMaskIntoConstraints="NO" id="TJ8-Mt-cHF">
+                                <rect key="frame" x="8" y="8" width="51" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TJ8-Mt-cHF" secondAttribute="height" multiplier="1:1" id="GFN-Jr-Unm"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BuI-EO-kJP">
+                                <rect key="frame" x="318" y="8" width="51" height="51"/>
+                                <color key="backgroundColor" name="BGColor1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BuI-EO-kJP" secondAttribute="height" multiplier="1:1" id="LsS-fM-daQ"/>
+                                </constraints>
+                                <state key="normal" image="Play">
+                                    <color key="titleColor" name="BGColor1"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playBtnPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vXf-Vn-CUs"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MusicPlay" translatesAutoresizingMaskIntoConstraints="NO" id="App-N2-dPW">
+                                <rect key="frame" x="77" y="16" width="223" height="35"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="TabbarColor"/>
+                        <constraints>
+                            <constraint firstItem="BuI-EO-kJP" firstAttribute="top" secondItem="ZOO-jz-Zlh" secondAttribute="top" constant="8" id="0Xx-eR-gIZ"/>
+                            <constraint firstItem="TJ8-Mt-cHF" firstAttribute="top" secondItem="ZOO-jz-Zlh" secondAttribute="top" constant="8" id="Aio-Z7-rcO"/>
+                            <constraint firstAttribute="bottom" secondItem="App-N2-dPW" secondAttribute="bottom" constant="16" id="Arv-Kz-7ez"/>
+                            <constraint firstItem="App-N2-dPW" firstAttribute="leading" secondItem="TJ8-Mt-cHF" secondAttribute="trailing" constant="18" id="HFK-Ud-2cw"/>
+                            <constraint firstItem="TJ8-Mt-cHF" firstAttribute="leading" secondItem="ZOO-jz-Zlh" secondAttribute="leading" constant="8" id="OAc-Fd-aCF"/>
+                            <constraint firstItem="BuI-EO-kJP" firstAttribute="leading" secondItem="App-N2-dPW" secondAttribute="trailing" constant="18" id="c0c-cv-tBc"/>
+                            <constraint firstAttribute="trailing" secondItem="BuI-EO-kJP" secondAttribute="trailing" constant="8" id="eNh-q6-GSP"/>
+                            <constraint firstAttribute="bottom" secondItem="TJ8-Mt-cHF" secondAttribute="bottom" constant="8" id="eru-dy-uTA"/>
+                            <constraint firstAttribute="bottom" secondItem="BuI-EO-kJP" secondAttribute="bottom" constant="8" id="fQL-M2-xTm"/>
+                            <constraint firstItem="App-N2-dPW" firstAttribute="top" secondItem="ZOO-jz-Zlh" secondAttribute="top" constant="16" id="yN1-CL-RSm"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="MFI-0V-hMM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="9xf-vF-D8e"/>
+                    <constraint firstItem="MFI-0V-hMM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="F1g-dq-oPS"/>
+                    <constraint firstAttribute="trailing" secondItem="ZOO-jz-Zlh" secondAttribute="trailing" constant="13" id="TBa-hn-Jud"/>
+                    <constraint firstAttribute="bottom" secondItem="ZOO-jz-Zlh" secondAttribute="bottom" constant="8" id="Vc9-8h-YiO"/>
+                    <constraint firstItem="ZOO-jz-Zlh" firstAttribute="top" secondItem="MFI-0V-hMM" secondAttribute="bottom" constant="4" id="s2B-Eg-5GQ"/>
+                    <constraint firstItem="ZOO-jz-Zlh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="wd5-yQ-uaZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="playBtn" destination="BuI-EO-kJP" id="F6f-7E-DK6"/>
+                <outlet property="titleLBL" destination="MFI-0V-hMM" id="iPh-Go-Sdl"/>
+            </connections>
+            <point key="canvasLocation" x="201.52671755725191" y="16.197183098591552"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="MusicPlay" width="195" height="33.333332061767578"/>
+        <image name="Play" width="32" height="32"/>
+        <image name="Songs" width="51" height="50"/>
+        <namedColor name="BGColor1">
+            <color red="1" green="0.70196078431372544" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TabbarColor">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
